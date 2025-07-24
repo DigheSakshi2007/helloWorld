@@ -1,0 +1,47 @@
+//1. Create a Java class Employee that has:
+//
+//   * A static variable companyName
+//   * Instance variables name, salary, and id
+//   * A static block to initialize companyName
+//   * A constructor to initialize name, id, and salary
+//   * A method to display employee details
+//   * Use Scanner to input data
+//   Answer
+package information;
+import java.util.Scanner;
+public class Employee { // class employee
+	static String CompanyName;//Static variable
+	String EmployeeName ;// instance variable
+	int Salary ;
+	int Employeeid;
+	
+	static
+	{
+		CompanyName = "Tata Motors";//Static block to initilize
+	}
+	Employee( String Employeename, int Salary, int Employeeid){ //constructor to initilize by using this keyword //method
+		this.EmployeeName= Employeename;
+		this.Salary = Salary;
+		this.Employeeid = Employeeid;
+	}
+	void DisplayDetails() 
+	{
+		System.out.println(" company name:" + CompanyName);
+		System.out.println(" Employee name: " + EmployeeName);
+		System.out.println(" Employee Salary:" + Salary);
+		System.out.println(" Employeeid:"+ Employeeid);
+		}
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in); // Use Scanner to input data
+		System.out.println("Employee name ");
+		String EmployeeName = sc.next();
+		System.out.println(" Employee Salary");
+		int Salary = sc.nextInt();
+		System.out.println(" Employee id");
+		int Employeeid = sc.nextInt();
+		Employee e1  = new Employee(EmployeeName, Salary, Employeeid);
+		e1.DisplayDetails();
+		sc.close();
+		}
+}
