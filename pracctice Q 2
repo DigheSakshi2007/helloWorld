@@ -1,0 +1,23 @@
+//2. Write a Java program that:
+//
+//   * Uses a final variable to store the value of Pi (3.14)
+//   * Accepts a radius from the user
+//   * Calculates and prints the area of a circle and Triangle
+
+package com.Final;
+import java.util.Scanner;
+public class Constant
+{
+	public static void main(String[] args) {
+		final float pi = 3.14f;
+		final float a = 0.5f;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Radius of a circle");
+		float radius = sc.nextFloat();
+		float Area = pi*radius*radius;
+		System.out.println("Area of cirle is "+ Area);
+		float Triangle = a*radius*radius;
+		System.out.println("Area of Triangle is "+ Triangle);
+        sc.close();
+	}
+	}
